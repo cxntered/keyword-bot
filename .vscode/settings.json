@@ -1,0 +1,12 @@
+{
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"typescript.preferences.importModuleSpecifierEnding": "js",
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/package.json": true,
+		"**/yarn.lock": true,
+	},
+	"oxc.enable": true
+}
