@@ -3,7 +3,7 @@ import { SlashCommandBuilder, EmbedBuilder, codeBlock } from '@discordjs/builder
 import { InteractionResponseType } from 'discord-interactions';
 import { Context } from 'hono';
 
-import { searchVideos, fetchVideos } from '../../utils/youtubeApi';
+import { searchVideos } from '../../utils/youtubeApi';
 import { colors } from '../../constants/colors';
 
 import type { Command } from '../../types/command';
@@ -13,9 +13,7 @@ export default {
 		if (interaction.data.options?.[0].type !== ApplicationCommandOptionType.String) return;
 		const query = interaction.data.options?.[0].value.toString();
 
-		const ids = await searchVideos(query, 50, c);
-		const videos = await fetchVideos(ids ?? [], c);
-
+		const videos = await searchVideos(query, 50, c);
 		const titles = videos.map((video) => video.snippet?.title ?? '');
 		const topFiveTitles = titles.slice(0, 5);
 

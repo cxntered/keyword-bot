@@ -3,7 +3,7 @@ import { SlashCommandBuilder, EmbedBuilder, codeBlock, bold } from '@discordjs/b
 import { InteractionResponseType } from 'discord-interactions';
 import { Context } from 'hono';
 
-import { searchVideos, fetchVideos } from '../../utils/youtubeApi';
+import { searchVideos } from '../../utils/youtubeApi';
 import { colors } from '../../constants/colors';
 
 import type { youtube_v3 } from '@googleapis/youtube';
@@ -59,9 +59,7 @@ export default {
 			}
 		};
 
-		const ids = await searchVideos(query, 20, c);
-		const videos = await fetchVideos(ids ?? [], c);
-
+		const videos = await searchVideos(query, 20, c);
 		const videoMetadata = videos.map((video: youtube_v3.Schema$Video) => `${video.snippet?.title} ${video.snippet?.description}`);
 		const videoTags = videos.flatMap((video: youtube_v3.Schema$Video) => video.snippet?.tags?.map((tag) => tag.toLowerCase()) ?? []);
 		const keywords = await findKeywords(videoMetadata, videoTags);
