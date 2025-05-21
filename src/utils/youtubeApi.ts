@@ -1,7 +1,7 @@
 import type { youtube_v3 } from '@googleapis/youtube';
 import type { Context } from 'hono';
 
-import type { Bindings } from '../types/Bindings';
+import type { Bindings } from '../types/bindings';
 
 export const searchVideos = async (query: string, maxResults: number, c: Context<{ Bindings: Bindings }>): Promise<undefined | string[]> => {
 	const url = new URL('https://www.googleapis.com/youtube/v3/search');

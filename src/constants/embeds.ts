@@ -1,6 +1,6 @@
 import { EmbedBuilder, time } from '@discordjs/builders';
 
-import { colors } from './colors.js';
+import { colors } from './colors';
 
 /**
  * Returns an EmbedBuilder for an error message

@@ -4,7 +4,7 @@ import { Hono } from 'hono';
 import { handleApplicationCommandAutocomplete } from './handlers/handleApplicationCommandAutocomplete';
 import { handleApplicationCommand } from './handlers/handleApplicationCommand';
 
-import type { Bindings } from './types/Bindings';
+import type { Bindings } from './types/bindings';
 
 const app = new Hono<{ Bindings: Bindings }>();
 

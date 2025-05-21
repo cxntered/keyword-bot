@@ -9,12 +9,12 @@ import { InteractionResponseFlags, InteractionResponseType } from 'discord-inter
 import { Context } from 'hono';
 import Fuse from 'fuse.js';
 
-import { getCommandMention } from '../../utils/getCommandMention.js';
-import { commands } from '../../constants/commands.js';
-import { errorEmbed } from '../../constants/embeds.js';
-import { colors } from '../../constants/colors.js';
+import { getCommandMention } from '../../utils/getCommandMention';
+import { commands } from '../../constants/commands';
+import { errorEmbed } from '../../constants/embeds';
+import { colors } from '../../constants/colors';
 
-import type { Command } from '../../interfaces/Command';
+import type { Command } from '../../types/command';
 
 export default {
 	execute: async (c: Context, interaction: APIChatInputApplicationCommandInteraction) => {

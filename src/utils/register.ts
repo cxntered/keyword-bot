@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 
-import { commands } from '../constants/commands.js';
+import { commands } from '../constants/commands';
 
 dotenv.config({ path: '.dev.vars' });
 

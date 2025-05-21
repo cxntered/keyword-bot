@@ -2,8 +2,8 @@ import { ApplicationCommandOptionType, APIApplicationCommand } from 'discord-api
 import { chatInputApplicationCommandMention } from '@discordjs/builders';
 import { Context } from 'hono';
 
-import type { Command } from '../interfaces/Command';
-import type { Bindings } from '../types/Bindings';
+import type { Command } from '../types/command';
+import type { Bindings } from '../types/bindings';
 
 export const getCommandMention = async (command: Command, c: Context<{ Bindings: Bindings }>, subcommandName?: undefined | string) => {
 	const url = `https://discord.com/api/v10/applications/${c.env.DISCORD_APPLICATION_ID}/commands`;

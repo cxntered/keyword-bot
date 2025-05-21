@@ -3,10 +3,10 @@ import { SlashCommandBuilder, EmbedBuilder, codeBlock } from '@discordjs/builder
 import { InteractionResponseType } from 'discord-interactions';
 import { Context } from 'hono';
 
-import { colors } from '../../constants/colors.js';
+import { colors } from '../../constants/colors';
 
-import type { Command } from '../../interfaces/Command.js';
-import type { Bindings } from '../../types/Bindings';
+import type { Bindings } from '../../types/bindings';
+import type { Command } from '../../types/command';
 
 export default {
 	async execute(c: Context<{ Bindings: Bindings }>, interaction: APIChatInputApplicationCommandInteraction) {

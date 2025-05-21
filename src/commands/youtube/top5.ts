@@ -3,10 +3,10 @@ import { SlashCommandBuilder, EmbedBuilder, codeBlock } from '@discordjs/builder
 import { InteractionResponseType } from 'discord-interactions';
 import { Context } from 'hono';
 
-import { searchVideos, fetchVideos } from '../../utils/youtubeApi.js';
-import { colors } from '../../constants/colors.js';
+import { searchVideos, fetchVideos } from '../../utils/youtubeApi';
+import { colors } from '../../constants/colors';
 
-import type { Command } from '../../interfaces/Command.js';
+import type { Command } from '../../types/command';
 
 export default {
 	execute: async (c: Context, interaction: APIChatInputApplicationCommandInteraction) => {

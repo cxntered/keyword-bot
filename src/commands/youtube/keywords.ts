@@ -3,13 +3,13 @@ import { SlashCommandBuilder, EmbedBuilder, codeBlock, bold } from '@discordjs/b
 import { InteractionResponseType } from 'discord-interactions';
 import { Context } from 'hono';
 
-import { searchVideos, fetchVideos } from '../../utils/youtubeApi.js';
-import { colors } from '../../constants/colors.js';
+import { searchVideos, fetchVideos } from '../../utils/youtubeApi';
+import { colors } from '../../constants/colors';
 
 import type { youtube_v3 } from '@googleapis/youtube';
 
-import type { Command } from '../../interfaces/Command.js';
-import type { Bindings } from '../../types/Bindings';
+import type { Bindings } from '../../types/bindings';
+import type { Command } from '../../types/command';
 
 export default {
 	execute: async (c: Context<{ Bindings: Bindings }>, interaction: APIChatInputApplicationCommandInteraction) => {
