@@ -1,7 +1,6 @@
 name = "keyword-bot"
 main = "./src/index.ts"
-compatibility_date = "2023-12-18"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
 
 kv_namespaces = [{ binding = "KEYWORD_BOT", id = "" }]
-
-node_compat = true
