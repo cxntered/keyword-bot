@@ -18,8 +18,8 @@ Built with [`Discord Interactions API`](https://discord.com/developers/docs/inte
 
 ### Requirements
 
-- [`Node.js`](https://nodejs.org/en): For running the bot (`v16.11.0 or higher`)
-- [`Yarn`](https://yarnpkg.com): For installing dependencies (`npm i -g yarn`)
+- [`Node.js`](https://nodejs.org/en): For running the bot (`v18 or higher`)
+- [`Yarn`](https://yarnpkg.com): For installing dependencies (`corepack enable`)
 - [`Discord Bot Token`](https://discord.com/developers/applications): For running the bot.
 - [`YouTube Data API v3 Key`](https://console.cloud.google.com/apis/credentials): For searching YouTube videos.
 - [`Cloudflare Worker`](https://workers.cloudflare.com): For hosting the bot.
